@@ -1,0 +1,14 @@
+<h1>All Movies</h1>
+<a href="/movies/new">➕ Add new One</a>
+{{#each movies}}
+  <h2>Title: {{title}}</h2>
+  <a href="/movies/{{id}}/edit">edit</a>
+  <p><strong>Genre: </strong>{{genre}}</p>
+  <p><strong>Plot: </strong>{{plot}}</p>
+  <ul>
+    {{#each cast}}
+      <li>{{name}}</li>
+    {{/each}}
+  </ul>
+  <a href="/movies/{{id}}/cast/edit">Edit Cast</a>
+{{/each}}
